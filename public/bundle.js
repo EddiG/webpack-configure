@@ -1,3 +1,4 @@
+var home =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -86,9 +87,12 @@ function showMessage(message) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__message__ = __webpack_require__(0);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "showMessage", function() { return __WEBPACK_IMPORTED_MODULE_0__message__["a"]; });
 
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__message__["a" /* showMessage */])('Have invoked from home.js');
+
+
 
 
 /***/ })
