@@ -1,0 +1,16 @@
+{
+  "name": "webpack-configure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:EddiG/webpack-configure.git",
+  "author": "Eduard Gilmutdinov <edgilmutdinov@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run http-server ./public/",
+    "build": "yarn run webpack"
+  },
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "webpack": "^2.5.0"
+  }
+}
