@@ -8,8 +8,7 @@ const isProduction = !isDevelopment;
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    home: './home',
-    about: './about',
+    app: './app',
     common: ['./console', './common'],
   },
 
