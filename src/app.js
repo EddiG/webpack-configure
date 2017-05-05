@@ -1,3 +1,3 @@
 const moduleName = location.pathname.slice(1);
 
-const module = import(`./route/${moduleName}`);
+const module = import(`./route/${moduleName}.js`);
