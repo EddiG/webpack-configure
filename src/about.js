@@ -1,5 +1,1 @@
-import { showMessage } from './message';
-
-showMessage('Have invoked from about.js');
-
-export { showMessage } from './message';
+console.log('log was invoked from about.js');

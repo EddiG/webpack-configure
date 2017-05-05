@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     home: './home',
     about: './about',
+    common: ['./console', './common'],
   },
 
   output: {
