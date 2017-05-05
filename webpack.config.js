@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
+const isDevelopment = NODE_ENV === 'development';
+const isProduction = !isDevelopment;
 
 module.exports = {
   entry: './src/home.js',
@@ -9,17 +11,17 @@ module.exports = {
     library: 'home',
   },
 
-  watch: NODE_ENV === 'development',
+  watch: isDevelopment,
   watchOptions: {
     aggregateTimeout: 100,
     ignored: /node_modules/,
   },
 
-  devtool: NODE_ENV === 'development' ? 'cheap-inline-source-map' : false,
+  devtool: isDevelopment ? 'cheap-inline-source-map' : false,
 
   plugins: [
     new webpack.DefinePlugin({
-      DEVELOPMENT: JSON.stringify(NODE_ENV === 'development'),
+      DEVELOPMENT: JSON.stringify(isDevelopment),
     }),
   ],
 
@@ -38,3 +40,14 @@ module.exports = {
     ],
   },
 };
+
+if (isProduction) {
+  const plugin = new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false,
+      drop_console: true,
+      unsafe: true,
+    },
+  });
+  module.exports.plugins.push(plugin);
+}
