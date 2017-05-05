@@ -1,6 +1,11 @@
 export function showMessage(message) {
   if (DEVELOPMENT) {
-    console.log('DEBUG:' + message);
+    const time = new Date().toJSON();
+    console.log(
+      `%c[${time}] %cDEBUG: ${message}`,
+      'color: red;',
+      'color: yellow;',
+    );
   }
 
   alert(message);
