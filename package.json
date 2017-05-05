@@ -11,6 +11,9 @@
     "build-prod": "NODE_ENV=production yarn run webpack"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
     "http-server": "^0.10.0",
     "webpack": "^2.5.0"
   }
