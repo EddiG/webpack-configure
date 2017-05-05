@@ -1,14 +1,21 @@
 const webpack = require('webpack');
+const path = require('path');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const isDevelopment = NODE_ENV === 'development';
 const isProduction = !isDevelopment;
 
 module.exports = {
-  entry: './src/home.js',
+  context: path.resolve(__dirname, 'src'),
+  entry: {
+    home: './home',
+    about: './about',
+  },
+
   output: {
-    filename: './public/bundle.js',
-    library: 'home',
+    path: path.resolve(__dirname, 'public'),
+    filename: '[name].js',
+    library: '[name]',
   },
 
   watch: isDevelopment,
