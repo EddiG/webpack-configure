@@ -15,6 +15,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'public'),
+    publicPath: '/',
     filename: '[name].js',
     library: '[name]',
   },
@@ -46,6 +47,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['es2015'],
+            plugins: ['syntax-dynamic-import'],
           },
         },
       },
