@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
@@ -14,4 +16,10 @@ module.exports = {
   },
 
   devtool: NODE_ENV === 'development' ? 'cheap-inline-source-map' : false,
+
+  plugins: [
+    new webpack.DefinePlugin({
+      DEVELOPMENT: JSON.stringify(NODE_ENV === 'development'),
+    }),
+  ],
 };
