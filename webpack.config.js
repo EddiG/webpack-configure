@@ -30,6 +30,9 @@ module.exports = {
     new webpack.DefinePlugin({
       DEVELOPMENT: JSON.stringify(isDevelopment),
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+    }),
   ],
 
   module: {
