@@ -10,4 +10,6 @@ module.exports = {
     aggregateTimeout: 100,
     ignored: /node_modules/,
   },
+
+  devtool: 'cheap-inline-source-map',
 };
