@@ -35,6 +35,7 @@ module.exports = {
       name: 'common',
       minChunks: 2,
     }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
   ],
 
   module: {

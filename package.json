@@ -6,9 +6,9 @@
   "author": "Eduard Gilmutdinov <edgilmutdinov@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "yarn run http-server ./public/",
-    "build-dev": "NODE_ENV=development yarn run webpack",
-    "build-prod": "NODE_ENV=production yarn run webpack"
+    "start": "http-server ./public/",
+    "build-dev": "NODE_ENV=development webpack",
+    "build-prod": "NODE_ENV=production webpack"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -17,5 +17,8 @@
     "babel-preset-es2015": "^6.24.1",
     "http-server": "^0.10.0",
     "webpack": "^2.5.0"
+  },
+  "dependencies": {
+    "moment": "^2.18.1"
   }
 }
