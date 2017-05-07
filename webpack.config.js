@@ -53,6 +53,10 @@ module.exports = {
       },
     ],
   },
+
+  externals: {
+    lodash: '_',
+  },
 };
 
 if (isProduction) {
