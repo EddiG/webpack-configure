@@ -1,6 +1,5 @@
 import _ from 'lodash';
 
-debugger;
 const users = [{ id: 1, name: 'Jhon' }, { id: 2, name: 'Eric' }];
 
 export function login(name) {
