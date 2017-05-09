@@ -2,3 +2,13 @@ body {
   background: url(bg.jpg) no-repeat center center fixed;
   background-size: cover;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 12%;
+}
+
+nav > a {
+  color: white;
+}

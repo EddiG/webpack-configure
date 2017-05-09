@@ -7,9 +7,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
   </head>
   <body>
-    <a href="/">Back</a>
-    <input type="button" value="Login" onclick="home.login()" />
-    <input type="button" value="Logout" onclick="home.logout()" />
+    <nav>
+      <a href="/">Back</a>
+      <a href="#login" role="button" onclick="home.login()">Login</a>
+      <a href="#logout" role="button" onclick="home.logout()">Logout</a>
+    </nav>
     <script>
       common.showMessage('showMessage was invoked from home.html');
       console.log('log was invoked from home.html');
