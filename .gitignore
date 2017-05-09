@@ -5,6 +5,7 @@
 
 # production
 public/**/*.js
+public/**/*.jpg
 
 # misc
 .DS_Store
