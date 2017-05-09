@@ -13,8 +13,9 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'public'),
-    publicPath: '/',
+    path: path.resolve(__dirname, 'public/assets'),
+    pathinfo: isDevelopment,
+    publicPath: '/assets/',
     filename: '[name].js',
     library: '[name]',
   },
